@@ -1,0 +1,59 @@
+/* pages/mall/shop/shop.wxss */
+page {
+  background-color: #f7f7f7;
+}
+.shop {
+  padding: 32rpx;
+  margin-top: 16rpx;
+  background-color: #fff;
+}
+.stars {
+  display: flex;
+  font-size: 32rpx;
+  padding: 16rpx 0;
+  color: #888888;
+}
+
+ .stars image {
+  width: 190rpx;
+  height: 32rpx;
+  margin-right: 16rpx;
+}
+
+.goods {
+  margin-top: 16rpx;
+}
+
+.goods .label {
+  padding: 16rpx 32rpx;
+  background-color: #fff;
+  color: #888888;
+}
+
+.courses {
+  padding: 0 16rpx;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}
+
+.course {
+  display: flex;
+  flex-direction: column;
+  border: 2rpx solid #ddd;
+  margin: 16rpx 0;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.title {
+  display: block;
+  color: #212121;
+  font-size: 12px;
+  width: 100%;
+  padding: 16rpx;
+  box-sizing: border-box;
+  overflow: hidden; /*自动隐藏文字*/
+  text-overflow: ellipsis;/*文字隐藏后添加省略号*/
+  white-space: nowrap;
+}

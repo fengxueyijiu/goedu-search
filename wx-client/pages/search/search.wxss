@@ -1,0 +1,8 @@
+/* pages/search/search.wxss */
+@import "../wxSearch/wxSearch.wxss";
+.courses {
+  margin: 0 24rpx;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+}

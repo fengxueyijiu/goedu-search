@@ -1,0 +1,71 @@
+<!--pages/mall/cart/cart.wxml-->
+<view class="container">
+  <view wx:if="{{hasList}}" class="carts">
+    <view class="shopName">
+      <!-- wx:if 是否全选显示不同图标 -->
+      <icon wx:if="{{selectAllStatus}}" type="success" color="red" bindtap="selectAll"/>
+      <icon wx:else type="circle" bindtap="selectAll"/>
+      <text>小天才专营店</text>
+    </view>
+    <view class="cart-box">
+      <!-- wx:for 渲染购物车列表 -->
+      <view wx:for="{{carts}}" class="cart">
+
+        <!-- wx:if 是否选择显示不同图标 -->
+        <icon wx:if="{{item.selected}}" type="success" color="red" bindtap="selectList" data-index="{{index}}" />
+        <icon wx:else type="circle" bindtap="selectList" data-index="{{index}}"/>
+
+        <!-- 点击商品图片可跳转到商品详情 -->
+        <navigator url="../goodsDetails/goodsDetails?id={{item.id}}">
+          <image class="cart-thumb" src="{{item.image}}"></image>
+        </navigator>
+        <view class="box">
+          <view class="title">
+            <text class="goodsName">{{item.title}}</text>
+            <!-- <text bindtap="deleteList" data-index="{{index}}"> × </text> -->
+             <icon type="clear" size="20" bindtap="deleteList" data-index="{{index}}" />
+          </view>
+          <text style="color:#e64340;">￥{{item.price}}</text>
+
+          <!-- 增加减少数量按钮 -->
+          <view class="num">
+            <view>
+              <text bindtap="minusCount" data-index="{{index}}">－</text>
+              <text class="shuzi">{{item.num}}</text>
+              <text bindtap="addCount" data-index="{{index}}">＋</text>
+            </view>
+
+            <!-- 删除按钮 -->
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:else class="empty"><view>您的购物车是空的</view></view>
+
+
+  <view class="goods">
+    <view class="label">为你推荐</view>
+    <view class="courses">
+      <view wx:for="{{courses}}" wx:key="id" style="width: 50%; padding: 0 8rpx;">
+        <navigator url="../goodsDetails/goodsDetails?link={{item.title}}" class="course">
+        <image src="{{item.cover}}" mode="widthFix" style="width: 100%"/>
+        <text class="title">{{item.title}}</text>
+        <text class="title" style="color:#e64340;padding-top: 0">¥798.00</text>
+        </navigator>
+      </view>
+    </view>
+  </view>
+
+
+
+  <view class="footer">
+    <view class="like">
+      <text style="color:#e64340">¥{{totalPrice}}</text>
+      <text>实付款：</text>
+    </view>
+    <view class="button">
+      <button type="warn" name="button" bindtap="pay">提交订单</button>
+    </view>
+  </view>
+</view>

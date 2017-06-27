@@ -1,0 +1,53 @@
+/* pages/courseOrder/courseOrder.wxss */
+page {
+  background-color: #f7f7f7;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  padding: 32rpx;
+  margin-top: 16rpx;
+  background-color: #fff;
+}
+
+.header .header-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 32rpx;
+}
+
+form {
+  display: block;
+  margin-top: 16rpx;
+}
+
+.label {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 32rpx;
+  align-items: center;
+  font-size: 32rpx;
+  border-bottom: 2rpx solid #f1f1f1;
+}
+
+.label text {
+  display: block;
+  flex-shrink: 0;
+}
+
+
+button {
+  width: 90%;
+  margin-top: 64rpx;
+  background-color: #ff8a00;
+  color: #fff;
+  border-radius: 24px;
+}

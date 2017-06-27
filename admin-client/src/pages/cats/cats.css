@@ -1,0 +1,67 @@
+.cat-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.cat-page .white-block {
+  margin-bottom: 30px;
+}
+.cat-page .white-block .modals{
+  display: flex;
+}
+.cat-page .white-block .modals >div {
+  margin-right: 20px;
+}
+.cat-page .title {
+  background-color: #f2f2f2;
+  padding: 8px 0;
+  margin-bottom: 30px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+}
+.cat-page .parent {
+  display: flex;
+}
+.cat-page .parent .wrapper {
+  border-left: 3px solid #108ee9;
+}
+.cat-page .parent .cat {
+  font-size: 16px;
+  background-color: #ecf6fd;
+  color: #108ee9;
+  margin-bottom: 0;
+}
+.cat-page .cat-list{
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.cat-page .cat{
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  padding: 6px 15px;
+  font-size: 14px;
+  background-color: #f1f1f1;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  transition: width .3s ease;
+  cursor: pointer;
+}
+.cat-page .cat .name {
+  flex-shrink: 0;
+}
+
+.cat-page .cat .actions{
+  padding-left: 15px;
+  display: flex;
+}
+
+.cat-page .cat .actions > div{
+  padding-left: 20px;
+  cursor: pointer;
+}

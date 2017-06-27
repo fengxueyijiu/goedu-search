@@ -1,0 +1,90 @@
+/* pages/courseOrder/courseOrder.wxss */
+page {
+  background-color: #f7f7f7;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  padding: 32rpx;
+  margin-top: 16rpx;
+  background-color: #fff;
+}
+
+.header .header-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 32rpx;
+}
+
+.main {
+  flex-grow: 1;
+  margin-top: 16rpx;
+}
+
+ .main .info{
+   background-color: #fff;
+ }
+
+.main .phone {
+  display: flex;
+  padding: 32rpx;
+  justify-content: space-between;
+  border-bottom: 2rpx solid #f1f1f1;
+}
+.info textarea {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 6px;
+  /*border:1px solid rgba(0, 0, 0, 0.2);*/
+  font-size: 28rpx;
+  padding: 16rpx 32rpx;
+}
+
+.footer {
+  display: flex;
+  height: 108rpx;
+  background-color: #fff;
+  border-top: 2rpx solid #f1f1f1;
+}
+.like {
+  width: 60%;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding-right: 32rpx;
+}
+
+
+/*.like navigator {
+  display: block;
+  padding: 0 16rpx;
+}*/
+
+
+.button {
+  display: flex;
+  width: 40%;
+}
+
+.button button {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  line-height: 108rpx;
+  border-radius: 0;
+  outline: none;
+}
+
+.button button::after{
+  width: auto;
+  height: auto;
+}

@@ -1,0 +1,29 @@
+<!--pages/courseOrder/courseOrder.wxml-->
+<view class="container">
+  <view class="header">
+    <image src="http://o86bpj665.bkt.clouddn.com/posters/gitbeijing.png" mode="aspectFill"  style="width: 200rpx;height:200rpx;border-radius:10rpx"/>
+    <view class="header-right">
+      <view style="color:#e64340">¥79.00</view>
+      <view>中国舞1班</view>
+      <view style="color:#888888">数量1</view>
+    </view>
+  </view>
+  <view class="main">
+    <view class="info">
+      <view class="phone">
+        <view style="color:#888888">手机号：</view>
+        <view>18633522222</view>
+      </view>
+      <textarea placeholder="请输入您留言...(200字以内)" name="textarea"/>
+    </view>
+  </view>
+  <view class="footer">
+    <view class="like">
+      <text style="color:#e64340">¥3880.00</text>
+      <text>实付款：</text>
+    </view>
+    <view class="button">
+      <button type="warn" name="button" bindtap="pay">提交订单</button>
+    </view>
+  </view>
+</view>

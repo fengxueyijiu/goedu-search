@@ -1,0 +1,35 @@
+<!--pages/mall/shop/shop.wxml-->
+<view class="container">
+  <image src="http://o86bpj665.bkt.clouddn.com/posters/gitbeijing.png" mode="widthFix" style="width: 750rpx"/>
+  <view class="shop">
+    <view>小天才专营店</view>
+    <view class="stars">
+      <image src="../../../images/stars.svg" />
+      <text>9.9分</text>
+    </view>
+  </view>
+  <view class="goods">
+    <view class="label">店铺精品</view>
+    <view class="courses">
+      <view wx:for="{{courses}}" wx:key="id" style="width: 50%; padding: 0 8rpx;">
+        <navigator url="../goodsDetails/goodsDetails?link={{item.title}}" class="course">
+        <image src="{{item.cover}}" mode="widthFix" style="width: 100%"/>
+        <text class="title">{{item.title}}</text>
+        <text class="title" style="color:#e64340;padding-top: 0">¥798.00</text>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <view class="goods">
+    <view class="label">店铺热销</view>
+    <view class="courses">
+      <view wx:for="{{courses}}" wx:key="id" style="width: 50%; padding: 0 8rpx;">
+        <navigator url="../goodsDetails/goodsDetails?link={{item.title}}" class="course">
+        <image src="{{item.cover}}" mode="widthFix" style="width: 100%"/>
+        <text class="title">{{item.title}}</text>
+        <text class="title" style="color:#e64340;padding-top: 0">¥798.00</text>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>

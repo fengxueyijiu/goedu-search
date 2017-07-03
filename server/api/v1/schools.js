@@ -182,14 +182,38 @@ exports.single = (req, res, next) => {
 //     .catch(next)
 // }
 
+// exports.search = (req, res, next) => {
+//   console.log(req.body.value)
+//   var regex = new RegExp(req.body.value, 'i');
+//   Q.all([
+//     Course.find({name: regex},function(err,doc){
+//      doc.map((item,indnex) =>{
+//         console.log(item.school)
+//      })
+//     }).exec(),
+//     School.find({name: regex}).exec()
+//   ])
+//   .then(results => {
+
+
+//     res.status(200).json({
+//           school:results[1],
+//           courses: results[0],
+//           // comments: results[1],
+//         })
+//   })
+//   .catch(next)
+// }
+
 exports.search = (req, res, next) => {
   console.log(req.body.value)
   var regex = new RegExp(req.body.value, 'i');
   Q.all([
-    Course.find({name: regex}).exec(),
+    Course.find({name: regex}).populate('school').exec(),
     School.find({name: regex}).exec()
   ])
   .then(results => {
+
     res.status(200).json({
           school:results[1],
           courses: results[0],
